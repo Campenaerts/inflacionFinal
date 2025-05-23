@@ -20,7 +20,7 @@ import os
 usuario = os.getenv("DB_USER")
 contraseña = os.getenv("DB_PASS")
 host = os.getenv("DB_HOST")
-puerto = os.getenv("DB_PORT")
+puerto = 5432
 base_datos = os.getenv("DB_NAME")
 
 engine = create_engine(f"postgresql+psycopg2://{usuario}:{contraseña}@{host}:{puerto}/{base_datos}")
