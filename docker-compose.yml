@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14
+    restart: always
+    environment:
+      POSTGRES_USER: usuario
+      POSTGRES_PASSWORD: contraseña
+      POSTGRES_DB: nombre_base
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    ports:
+      - "8050:8050"
+    environment:
+      DB_HOST: db
+      DB_USER: usuario
+      DB_PASS: contraseña
+      DB_NAME: nombre_base
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

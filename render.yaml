@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: dash-dashboard
+    env: docker
+    plan: free
+    branch: main
+    autoDeploy: true
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: DB_HOST
+        value: tu_host
+      - key: DB_NAME
+        value: tu_base
+      - key: DB_USER
+        value: tu_usuario
+      - key: DB_PASS
+        value: tu_contraseña
