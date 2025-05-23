@@ -6,3 +6,5 @@ plotly
 statsmodels
 scikit-learn
 prophet
+sqlalchemy
+psycopg2-binary
