@@ -17,11 +17,11 @@ warnings.filterwarnings("ignore")
 from sqlalchemy import create_engine
 import os
 
-usuario = os.environ.get("DB_USER")
-contraseña = os.environ.get("DB_PASS")
-host = os.environ.get("DB_HOST")
-puerto = os.environ.get("DB_PORT")
-base_datos = os.environ.get("DB_NAME")
+usuario = os.getenv("DB_USER")
+contraseña = os.getenv("DB_PASS")
+host = os.getenv("DB_HOST")
+puerto = os.getenv("DB_PORT")
+base_datos = os.getenv("DB_NAME")
 
 engine = create_engine(f"postgresql+psycopg2://{usuario}:{contraseña}@{host}:{puerto}/{base_datos}")
 
