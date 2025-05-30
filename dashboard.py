@@ -186,11 +186,11 @@ subtabs_metodologia = dcc.Tabs([
             html.Div(className="row", children=[
                 html.Div(className="col-md-4", children=[
                     html.H6('Dimensiones:', className="fw-bold"),
-                    html.P('553 filas × 8 columnas (Fecha + 7 ciudades)')
+                    html.P('3787 filas × 4 columnas (Fecha, ciudad, IPC e inflación)')
                 ]),
                 html.Div(className="col-md-4", children=[
                     html.H6('Período Temporal:', className="fw-bold"),
-                    html.P('1979 - 2025')
+                    html.P('1980 - 2025 (para incluir la inflación)')
                 ]),
                 html.Div(className="col-md-4", children=[
                     html.H6('Frecuencia:', className="fw-bold"),
